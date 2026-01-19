@@ -60,18 +60,18 @@ jobs:
           # claude_args: '--allowed-tools Bash(gh pr:*)'
           
           mcp_config: |
-              {
-                "mcpServers": {
-                  "playwright": {
-                    "command": "npx",
-                    "args": [
-                      "@playwright/mcp@latest",
-                      "--allowed-origins",
-                      "localhost:3000;cdn.tailwindcss.com;esm.sh"
-                    ]
-                  }
+            {
+              "mcpServers": {
+                "playwright": {
+                  "command": "npx",
+                  "args": [
+                    "@playwright/mcp@latest",
+                    "--allowed-origins",
+                    "localhost:3000;cdn.tailwindcss.com;esm.sh"
+                  ]
                 }
               }
-            
-            allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."
+            }
+
+          claude_args: '--allowed-tools "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."'
 
